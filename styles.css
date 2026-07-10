@@ -1,18 +1,23 @@
 /*
   Bonkey Cards landing page styles.
   Headless first draft — see the comment at the top of index.html.
-  No CDN imports: headings use a serif system stack, body text a
-  sans-serif system stack, so the page has zero network dependencies.
+  Headings/logo use Baloo 2, body uses Nunito (Google Fonts, fonts only —
+  the sole external resource on the page; all imagery is local .webp).
   Color values are taken from the in-repo Bonkey brand tokens at
   docs/design/handoff/_ds/.../tokens/colors.css (light = "Sunshine",
   dark = "Cosmic Night").
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
 
 :root {
   --teal: #16b8ae;
   --teal-dark: #0e9d95;
   --coral: #ff6f61;
   --sun: #ffb13c;
+  --violet: #9b7be8;
+  --sky: #3fb6e8;
+  --suit-red: #d33f3f;
   --ink: #243042;
   --cream: #fff6ec;
   --cream-dark: #f5ece0;
@@ -29,9 +34,10 @@
   --shadow-color: rgba(36, 48, 66, 0.12);
 
   --font-heading:
-    Georgia, 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+    'Baloo 2', 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
   --font-body:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -127,12 +133,18 @@ a {
 
 .logo-mark {
   flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px var(--shadow-color);
 }
 
 .logo-text {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.01em;
   color: var(--text);
 }
 
@@ -202,7 +214,8 @@ a {
 /* ---------- hero ---------- */
 
 .hero {
-  padding: 56px 0;
+  padding: 64px 0 72px;
+  background: linear-gradient(150deg, #1bc3b9 0%, #16b8ae 40%, #3fb6e8 100%);
 }
 
 .hero-row {
@@ -218,13 +231,15 @@ a {
 }
 
 .hero-copy h1 {
-  font-size: 40px;
-  line-height: 1.15;
+  font-size: 42px;
+  line-height: 1.12;
+  color: #ffffff;
 }
 
 .hero-lede {
   font-size: 18px;
   max-width: 46em;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .hero-actions {
@@ -234,9 +249,35 @@ a {
   margin-bottom: 16px;
 }
 
+/* CTAs sit on the teal gradient — recolor for contrast */
+.hero .btn-primary {
+  background: #ffffff;
+  color: var(--teal-dark);
+}
+
+.hero .btn-primary:hover {
+  background: var(--cream);
+}
+
+.hero .btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.hero .btn-secondary:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
 .hero-caveat {
   font-size: 14px;
   max-width: 42em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-caveat strong {
+  color: #ffffff;
 }
 
 .hero-art {
@@ -244,6 +285,13 @@ a {
   min-width: 200px;
   display: flex;
   justify-content: center;
+}
+
+.hero-mascot {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  filter: drop-shadow(0 16px 28px rgba(36, 48, 66, 0.28));
 }
 
 /* ---------- games ---------- */
@@ -270,10 +318,12 @@ a {
 }
 
 .game-card {
+  --game-accent: var(--primary);
   background: var(--surface);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--game-accent);
   border-radius: 16px;
-  padding: 20px 16px;
+  padding: 18px 16px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -282,8 +332,23 @@ a {
 }
 
 .game-suit {
-  font-size: 28px;
-  color: var(--accent);
+  font-size: 30px;
+  line-height: 1;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--game-accent) 16%, transparent);
+}
+
+.suit-red {
+  color: var(--suit-red);
+}
+
+.suit-ink {
+  color: var(--ink);
 }
 
 .game-name {
@@ -321,10 +386,29 @@ a {
 
 /* ---------- get the app ---------- */
 
+.get-app {
+  text-align: center;
+}
+
+.get-app .section-lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.get-app-mascot {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 8px;
+  filter: drop-shadow(0 10px 20px var(--shadow-color));
+}
+
 .store-badges {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 24px 0;
 }
 
@@ -373,6 +457,19 @@ a {
   font-weight: 600;
 }
 
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 767px) {
@@ -399,9 +496,8 @@ a {
     order: -1;
   }
 
-  .hero-art svg {
-    width: 180px;
-    height: 150px;
+  .hero-mascot {
+    max-width: 240px;
   }
 }
 
