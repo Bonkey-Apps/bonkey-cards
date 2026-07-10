@@ -27,27 +27,14 @@
     <header class="site-header">
       <div class="wrap header-row">
         <a class="logo" href="./">
-          <svg
+          <img
             class="logo-mark"
-            viewBox="0 0 32 32"
-            width="28"
-            height="28"
+            src="./assets/bonkey_icon.webp"
+            width="36"
+            height="36"
+            alt=""
             aria-hidden="true"
-            focusable="false"
-          >
-            <rect x="2" y="2" width="28" height="28" rx="7" fill="var(--primary)" />
-            <text
-              x="16"
-              y="22"
-              text-anchor="middle"
-              font-family="Georgia, serif"
-              font-size="17"
-              font-weight="700"
-              fill="var(--text-on-primary)"
-            >
-              ♠
-            </text>
-          </svg>
+          />
           <span class="logo-text">Bonkey<span class="logo-accent">Cards</span></span>
         </a>
         <nav class="site-nav" aria-label="Primary">
@@ -77,77 +64,12 @@
               multiplayer with a friend nearby is available in the mobile app.
             </p>
           </div>
-          <div class="hero-art" aria-hidden="true">
-            <svg viewBox="0 0 240 200" width="240" height="200" role="img" aria-label="">
-              <g>
-                <rect
-                  x="30"
-                  y="40"
-                  width="90"
-                  height="126"
-                  rx="12"
-                  fill="var(--surface)"
-                  stroke="var(--border)"
-                  stroke-width="2"
-                  transform="rotate(-8 75 103)"
-                />
-                <text
-                  x="75"
-                  y="100"
-                  transform="rotate(-8 75 103)"
-                  text-anchor="middle"
-                  font-family="Georgia, serif"
-                  font-size="34"
-                  fill="var(--accent)"
-                >
-                  ♥
-                </text>
-                <rect
-                  x="90"
-                  y="34"
-                  width="90"
-                  height="126"
-                  rx="12"
-                  fill="var(--surface)"
-                  stroke="var(--border)"
-                  stroke-width="2"
-                  transform="rotate(4 135 97)"
-                />
-                <text
-                  x="135"
-                  y="94"
-                  transform="rotate(4 135 97)"
-                  text-anchor="middle"
-                  font-family="Georgia, serif"
-                  font-size="34"
-                  fill="var(--text)"
-                >
-                  ♠
-                </text>
-                <rect
-                  x="130"
-                  y="46"
-                  width="90"
-                  height="126"
-                  rx="12"
-                  fill="var(--surface)"
-                  stroke="var(--border)"
-                  stroke-width="2"
-                  transform="rotate(16 175 109)"
-                />
-                <text
-                  x="175"
-                  y="106"
-                  transform="rotate(16 175 109)"
-                  text-anchor="middle"
-                  font-family="Georgia, serif"
-                  font-size="34"
-                  fill="var(--primary)"
-                >
-                  ♦
-                </text>
-              </g>
-            </svg>
+          <div class="hero-art">
+            <img
+              class="hero-mascot"
+              src="./assets/bonkey-hero.webp"
+              alt="Bonkey, the Bonkey Cards mascot, holding a fan of playing cards"
+            />
           </div>
         </div>
       </section>
@@ -160,28 +82,28 @@
             Bonkey's AI or passing devices around the table with friends.
           </p>
           <ul class="game-grid">
-            <li class="game-card">
-              <span class="game-suit" aria-hidden="true">♥</span>
+            <li class="game-card" style="--game-accent: #ff6f61">
+              <span class="game-suit suit-red" aria-hidden="true">♥</span>
               <span class="game-name">Hearts</span>
               <span class="game-price">Free</span>
             </li>
-            <li class="game-card">
-              <span class="game-suit" aria-hidden="true">♠</span>
+            <li class="game-card" style="--game-accent: #9b7be8">
+              <span class="game-suit suit-ink" aria-hidden="true">♠</span>
               <span class="game-name">Spades</span>
               <span class="game-price">Free</span>
             </li>
-            <li class="game-card">
-              <span class="game-suit" aria-hidden="true">♦</span>
+            <li class="game-card" style="--game-accent: #16b8ae">
+              <span class="game-suit suit-red" aria-hidden="true">♦</span>
               <span class="game-name">Tens</span>
               <span class="game-price">Free</span>
             </li>
-            <li class="game-card">
-              <span class="game-suit" aria-hidden="true">♣</span>
+            <li class="game-card" style="--game-accent: #3fb6e8">
+              <span class="game-suit suit-ink" aria-hidden="true">♣</span>
               <span class="game-name">Go Fish</span>
               <span class="game-price">Free</span>
             </li>
-            <li class="game-card">
-              <span class="game-suit" aria-hidden="true">♠</span>
+            <li class="game-card" style="--game-accent: #ffb13c">
+              <span class="game-suit suit-ink" aria-hidden="true">♠</span>
               <span class="game-name">Gin Rummy</span>
               <span class="game-price">Free</span>
             </li>
@@ -221,6 +143,11 @@
 
       <section id="get-the-app" class="get-app">
         <div class="wrap">
+          <img
+            class="get-app-mascot"
+            src="./assets/bonkey_2times.webp"
+            alt="Two Bonkey mascots waving, ready to play together over Bluetooth"
+          />
           <h2>Get the app</h2>
           <p class="section-lede">
             Bonkey Cards is launching soon on mobile app stores. In the meantime, try it
@@ -247,7 +174,17 @@
 
     <footer class="site-footer">
       <div class="wrap footer-row">
-        <span>&copy; 2026 Bonkey Cards</span>
+        <span class="footer-brand">
+          <img
+            class="footer-mark"
+            src="./assets/bonkey_icon.webp"
+            width="28"
+            height="28"
+            alt=""
+            aria-hidden="true"
+          />
+          &copy; 2026 Bonkey Cards
+        </span>
         <a href="./app/">Play in browser</a>
       </div>
     </footer>
