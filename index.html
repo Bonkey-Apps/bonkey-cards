@@ -1,0 +1,255 @@
+<!--
+  HEADLESS FIRST DRAFT — no docs/design/landing.md exists yet in this repo
+  (the interactive landing design session hasn't run). This page was
+  authored directly from issue #73's rails plus the in-repo Bonkey brand
+  tokens (docs/design/handoff/_ds/.../tokens/*.css). If a `claude_design`
+  landing session is run later, its output supersedes this draft.
+
+  Zero build step: hand-written semantic HTML + CSS, no CDN dependencies,
+  no JS. All links are relative for the /bonkey-cards/ Pages subpath.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bonkey Cards — card games, played in person</title>
+    <meta
+      name="description"
+      content="Bonkey Cards is an offline-first card game app. Play Hearts, Spades, Tens, Go Fish, and Gin Rummy solo vs. AI or device-to-device over Bluetooth — no accounts, no server, no internet needed to play."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="logo" href="./">
+          <svg
+            class="logo-mark"
+            viewBox="0 0 32 32"
+            width="28"
+            height="28"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="2" y="2" width="28" height="28" rx="7" fill="var(--primary)" />
+            <text
+              x="16"
+              y="22"
+              text-anchor="middle"
+              font-family="Georgia, serif"
+              font-size="17"
+              font-weight="700"
+              fill="var(--text-on-primary)"
+            >
+              ♠
+            </text>
+          </svg>
+          <span class="logo-text">Bonkey<span class="logo-accent">Cards</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#games">Games</a>
+          <a href="#get-the-app">Get the app</a>
+          <a class="nav-cta" href="./app/">Play in browser</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero-row">
+          <div class="hero-copy">
+            <h1>Card games, made for the table.</h1>
+            <p class="hero-lede">
+              Bonkey Cards is an offline-first app for classic card games. Play solo against
+              an AI opponent, or connect two phones over Bluetooth to play together in
+              person — no accounts, no server, no internet connection required for gameplay.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="./app/">Play in browser</a>
+              <a class="btn btn-secondary" href="#get-the-app">Get the app</a>
+            </div>
+            <p class="hero-caveat">
+              The browser version is <strong>solo play only</strong> — Bluetooth
+              multiplayer with a friend nearby is available in the mobile app.
+            </p>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <svg viewBox="0 0 240 200" width="240" height="200" role="img" aria-label="">
+              <g>
+                <rect
+                  x="30"
+                  y="40"
+                  width="90"
+                  height="126"
+                  rx="12"
+                  fill="var(--surface)"
+                  stroke="var(--border)"
+                  stroke-width="2"
+                  transform="rotate(-8 75 103)"
+                />
+                <text
+                  x="75"
+                  y="100"
+                  transform="rotate(-8 75 103)"
+                  text-anchor="middle"
+                  font-family="Georgia, serif"
+                  font-size="34"
+                  fill="var(--accent)"
+                >
+                  ♥
+                </text>
+                <rect
+                  x="90"
+                  y="34"
+                  width="90"
+                  height="126"
+                  rx="12"
+                  fill="var(--surface)"
+                  stroke="var(--border)"
+                  stroke-width="2"
+                  transform="rotate(4 135 97)"
+                />
+                <text
+                  x="135"
+                  y="94"
+                  transform="rotate(4 135 97)"
+                  text-anchor="middle"
+                  font-family="Georgia, serif"
+                  font-size="34"
+                  fill="var(--text)"
+                >
+                  ♠
+                </text>
+                <rect
+                  x="130"
+                  y="46"
+                  width="90"
+                  height="126"
+                  rx="12"
+                  fill="var(--surface)"
+                  stroke="var(--border)"
+                  stroke-width="2"
+                  transform="rotate(16 175 109)"
+                />
+                <text
+                  x="175"
+                  y="106"
+                  transform="rotate(16 175 109)"
+                  text-anchor="middle"
+                  font-family="Georgia, serif"
+                  font-size="34"
+                  fill="var(--primary)"
+                >
+                  ♦
+                </text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section id="games" class="games">
+        <div class="wrap">
+          <h2>Five classics, all free at launch</h2>
+          <p class="section-lede">
+            Every game runs on the same rules engine, whether you're playing solo against
+            Bonkey's AI or passing devices around the table with friends.
+          </p>
+          <ul class="game-grid">
+            <li class="game-card">
+              <span class="game-suit" aria-hidden="true">♥</span>
+              <span class="game-name">Hearts</span>
+              <span class="game-price">Free</span>
+            </li>
+            <li class="game-card">
+              <span class="game-suit" aria-hidden="true">♠</span>
+              <span class="game-name">Spades</span>
+              <span class="game-price">Free</span>
+            </li>
+            <li class="game-card">
+              <span class="game-suit" aria-hidden="true">♦</span>
+              <span class="game-name">Tens</span>
+              <span class="game-price">Free</span>
+            </li>
+            <li class="game-card">
+              <span class="game-suit" aria-hidden="true">♣</span>
+              <span class="game-name">Go Fish</span>
+              <span class="game-price">Free</span>
+            </li>
+            <li class="game-card">
+              <span class="game-suit" aria-hidden="true">♠</span>
+              <span class="game-name">Gin Rummy</span>
+              <span class="game-price">Free</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="wrap">
+          <h2>Built to play in the same room</h2>
+          <ul class="feature-list">
+            <li>
+              <h3>Offline-first</h3>
+              <p>No internet connection is needed to play — gameplay never touches a server.</p>
+            </li>
+            <li>
+              <h3>Solo vs. AI</h3>
+              <p>
+                Play any game against a built-in AI opponent, powered by the exact same
+                rules engine as multiplayer.
+              </p>
+            </li>
+            <li>
+              <h3>Bluetooth, in person</h3>
+              <p>
+                Connect device-to-device with Bluetooth to play with friends at the same
+                table — no accounts to create, no lobby to find online.
+              </p>
+            </li>
+            <li>
+              <h3>No accounts, nothing tracked</h3>
+              <p>Just open the app and play. Nothing about your games leaves your device.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="get-the-app" class="get-app">
+        <div class="wrap">
+          <h2>Get the app</h2>
+          <p class="section-lede">
+            Bonkey Cards is launching soon on mobile app stores. In the meantime, try it
+            free in your browser (solo play only).
+          </p>
+          <div class="store-badges">
+            <span class="store-badge" aria-label="App Store — coming soon">
+              <span class="store-badge-label">App Store</span>
+              <span class="store-badge-status">Coming soon</span>
+            </span>
+            <span class="store-badge" aria-label="Google Play — coming soon">
+              <span class="store-badge-label">Google Play</span>
+              <span class="store-badge-status">Coming soon</span>
+            </span>
+            <span class="store-badge" aria-label="Amazon Appstore — coming soon">
+              <span class="store-badge-label">Amazon Appstore</span>
+              <span class="store-badge-status">Coming soon</span>
+            </span>
+          </div>
+          <a class="btn btn-primary" href="./app/">Play in browser now</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <span>&copy; 2026 Bonkey Cards</span>
+        <a href="./app/">Play in browser</a>
+      </div>
+    </footer>
+  </body>
+</html>
