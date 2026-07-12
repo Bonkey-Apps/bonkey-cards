@@ -435,6 +435,73 @@ a {
   letter-spacing: 0.04em;
 }
 
+/* ---------- premium packs / roadmap ---------- */
+
+.packs {
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+}
+
+.pack-grid {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.pack-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pack-badge {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.pack-badge.free {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 15%, transparent);
+}
+
+.pack-icon {
+  font-size: 30px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.pack-card h3 {
+  font-size: 18px;
+  margin: 2px 0 0;
+}
+
+.pack-card p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.pack-note {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
 /* ---------- footer ---------- */
 
 .site-footer {
@@ -484,6 +551,7 @@ a {
   .hero,
   .games,
   .features,
+  .packs,
   .get-app {
     padding: 36px 0;
   }
