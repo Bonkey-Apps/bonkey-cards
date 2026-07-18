@@ -1,0 +1,240 @@
+<!--
+  Rendered from release/privacy-policy.md — the canonical source. Keep the
+  heading order and wording in sync with that file (see its "Canonical
+  source" note) and with release/store-listings.md (Data safety / App
+  Privacy sections), which this page must never contradict.
+
+  Zero build step: hand-written semantic HTML, reusing the landing's own
+  styles.css and favicon.svg so it matches index.html's look. No CDN
+  dependencies beyond the Google Fonts already loaded by styles.css. All
+  links are relative for the /bonkey-cards/ Pages subpath.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Bonkey Cards</title>
+    <meta
+      name="description"
+      content="Bonkey Cards privacy policy: no accounts, no analytics, no ads, no trackers. Bonkey Cards is offline-first; the only off-device connection is a direct Bluetooth link to another player's device you choose to connect to."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      /* Page-specific layout for the privacy policy prose. Reuses the
+         color/spacing custom properties defined in styles.css so this page
+         stays visually consistent with the rest of the landing without
+         needing changes to the shared stylesheet. */
+      .policy {
+        padding: 48px 0 72px;
+      }
+
+      .policy-header h1 {
+        font-size: 34px;
+        margin-bottom: 4px;
+      }
+
+      .policy-updated {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-bottom: 32px;
+      }
+
+      .policy-lede {
+        font-size: 17px;
+        max-width: 58em;
+      }
+
+      .prose {
+        max-width: 68em;
+      }
+
+      .prose h2 {
+        font-size: 20px;
+        margin-top: 40px;
+      }
+
+      .prose p {
+        font-size: 15px;
+      }
+
+      .prose ul {
+        margin: 0 0 1em;
+        padding-left: 1.25em;
+      }
+
+      .prose li {
+        color: var(--text-secondary);
+        font-size: 15px;
+        margin-bottom: 0.4em;
+      }
+
+      .prose strong {
+        color: var(--text);
+      }
+
+      .prose a {
+        color: var(--primary);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="logo" href="./">
+          <img
+            class="logo-mark"
+            src="./assets/bonkey_icon.webp"
+            width="36"
+            height="36"
+            alt=""
+            aria-hidden="true"
+          />
+          <span class="logo-text">Bonkey<span class="logo-accent">Cards</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="./#games">Games</a>
+          <a href="./#whats-coming">What's coming</a>
+          <a href="./#get-the-app">Get the app</a>
+          <a class="nav-cta" href="./app/">Play in browser</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="policy">
+        <div class="wrap">
+          <header class="policy-header">
+            <h1>Privacy Policy</h1>
+            <p class="policy-updated">Last updated July 16, 2026</p>
+          </header>
+
+          <div class="prose">
+            <p class="policy-lede">
+              Bonkey Cards does not collect, store, or share any personal information. There are
+              no user accounts, no analytics, no advertising, and no third-party trackers of any
+              kind. Bonkey Cards is an offline-first card game app — every game runs entirely on
+              the device you're playing on. The only time anything leaves your device is when you
+              choose to connect directly to another nearby device over Bluetooth to play together,
+              and even then only the game moves you make are shared, directly with that device —
+              never with us or with anyone else.
+            </p>
+
+            <h2>Who we are</h2>
+            <p>
+              Bonkey Cards is made by Bonkey Apps. If you have any questions about this policy or
+              about the app, contact us at
+              <a href="mailto:bonkey.apps@gmail.com">bonkey.apps@gmail.com</a>.
+            </p>
+
+            <h2>Information we collect</h2>
+            <p><strong>None.</strong> Specifically, Bonkey Cards does not:</p>
+            <ul>
+              <li>Require or offer account creation, sign-in, or sign-up of any kind.</li>
+              <li>Collect names, email addresses, birthdates, or any other personal information.</li>
+              <li>Include any analytics software development kit (SDK).</li>
+              <li>Include any advertising SDK or show any ads.</li>
+              <li>
+                Use cookies, device fingerprinting, advertising identifiers, or any other
+                cross-app or cross-site tracking technology.
+              </li>
+              <li>
+                Transmit gameplay data or game state to any server. There is no server — Bonkey
+                Cards works entirely offline.
+              </li>
+            </ul>
+
+            <h2>What stays on your device</h2>
+            <p>
+              Game settings and any local preferences are stored locally on your device only.
+              Uninstalling the app removes this data. We have no access to it, cannot see it, and
+              never receive a copy of it.
+            </p>
+
+            <h2>Bluetooth multiplayer</h2>
+            <p>
+              Bonkey Cards lets you play Hearts, Spades, Tens, Go Fish, and Gin Rummy with other
+              people in the same room by connecting devices directly over Bluetooth — not through
+              the internet and not through any Bonkey Apps server. This local, peer-to-peer
+              connection is used only to exchange the structured game moves (for example, which
+              card was played) between the devices a player has chosen to connect to. Nothing from
+              a Bluetooth game is sent to Bonkey Apps or stored anywhere beyond the devices
+              actually playing.
+            </p>
+            <p>
+              Bluetooth ("Nearby devices") permission is requested solely to discover and connect
+              to nearby devices for local multiplayer. It is <strong>never</strong> used to
+              determine or share your location, and no data collected through it is sent to Bonkey
+              Apps or any third party.
+            </p>
+            <p>
+              Solo play against the built-in AI opponent never uses Bluetooth or any network
+              connection at all — the AI runs entirely on your device using the exact same rules
+              engine as multiplayer.
+            </p>
+
+            <h2>Who can play Bonkey Cards</h2>
+            <p>
+              Bonkey Cards is a general-audience app (Games &rarr; Card category, rated Everyone /
+              PEGI 3) — classic trick-taking and matching card games with no violence, no gambling
+              or real-money wagering, and no chat or open communication features. Players can only
+              interact through structured, turn-based game moves exchanged over a direct Bluetooth
+              connection to a device they chose to connect to.
+            </p>
+
+            <h2>Purchases</h2>
+            <p>
+              All five launch games — Hearts, Spades, Tens, Go Fish, and Gin Rummy — are free and
+              always will be. Bonkey Cards has no in-app purchases at launch. Future updates may
+              add optional in-app purchases (for example, additional card game packs or cosmetic
+              unlocks). Any future purchase is processed entirely by the app store you downloaded
+              from (Apple App Store, Google Play, or the Amazon Appstore) — those stores handle
+              payment, and Bonkey Apps never receives or stores your payment details or any
+              personal data through that process. This section will be updated with specifics if
+              and when any purchase is introduced.
+            </p>
+
+            <h2>Data sharing</h2>
+            <p>
+              We do not share, sell, rent, or otherwise disclose any data to third parties,
+              because we do not collect any data to share in the first place.
+            </p>
+
+            <h2>Changes to this policy</h2>
+            <p>
+              If this policy changes, the updated version will be posted at this same address with
+              a new "Last updated" date above.
+            </p>
+
+            <h2>Contact us</h2>
+            <p>
+              Questions about privacy or this app? Email
+              <a href="mailto:bonkey.apps@gmail.com">bonkey.apps@gmail.com</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <span class="footer-brand">
+          <img
+            class="footer-mark"
+            src="./assets/bonkey_icon.webp"
+            width="28"
+            height="28"
+            alt=""
+            aria-hidden="true"
+          />
+          &copy; 2026 Bonkey Cards
+        </span>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./app/">Play in browser</a>
+      </div>
+    </footer>
+  </body>
+</html>
